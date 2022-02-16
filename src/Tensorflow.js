@@ -2,7 +2,7 @@ import { useEffect,useRef } from "react";
 
 const blazeface = require("@tensorflow-models/blazeface");
 
-const Tensorflow = ({setLoading})=>{
+const Tensorflow = ()=>{
   let model;
   const canvas = useRef(null);
   const video = useRef(null);
@@ -37,7 +37,7 @@ const Tensorflow = ({setLoading})=>{
 
 
   const getVideo = ()=>{
-    setLoading(true);
+    
     const context = canvas.current.getContext("2d");
     navigator.getMedia =navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
 
@@ -53,7 +53,6 @@ const Tensorflow = ({setLoading})=>{
         console.log(error);
       }
       );
-      setLoading(false);
  
       draw(video, context,640,480);
     }
