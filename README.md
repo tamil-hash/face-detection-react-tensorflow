@@ -1,4 +1,4 @@
 # Face detection using react and tensorflow
 
-### Demo link:  
+### Demo link:  https://reverent-poincare-60585e.netlify.app/
 
